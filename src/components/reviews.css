@@ -1,0 +1,26 @@
+@keyframes scroll-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* move half width (first set of cards) */
+  }
+}
+
+.scroll-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  scrollbar-width: thin;
+}
+
+.scroll-content {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: scroll-right 40s linear infinite;
+}
+
+.scroll-content:hover {
+  animation-play-state: paused;
+}
